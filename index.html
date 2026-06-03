@@ -3,9 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Tradiciones y Derechos</title>
+    <title>Protección Cultural: Dulce Tradicional de Ciruela</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Fondo dinámico sutil -->
+    <div class="bg-gradient-glow"></div>
+
+    <!-- Encabezado con energía y formalidad -->
+    <header class="main-header animate-fade-in">
+        <div class="header-container">
+            <span class="badge-tag">◈ Identidad Colectiva y Derechos ◈</span>
+            <h1>PROTEGIENDO NUESTRAS RAÍCES Y DERECHOS</h1>
+            <div class="decorative-line"><span>❖</span></div>
+            <p class="subtitle">Salvaguardia del Dulce Tradicional de Ciruela de Yucatán</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- Bloque de Responsabilidad Social (Introducción Obligatoria) -->
+        <section class="intro-block animate-slide-up">
+            <div class="block-label">𓇚 Reflexión Institucional</div>
+            <h2>Preservación del Patrimonio Gastronómico</h2>
+            <p>
+                Esta página web contribuye al fortalecimiento de la identidad cultural de nuestra comunidad al difundir la importancia del Dulce Tradicional de Ciruela de Yucatán. A través de la información presentada, se promueve el conocimiento, la valoración y la preservación de esta tradición, reconociendo el trabajo de los productores locales y fomentando el orgullo por nuestras raíces culturales. De esta manera, se busca que las nuevas generaciones conozcan y aprecien el patrimonio gastronómico de Yucatán.
+            </p>
+        </section>
+
+        <!-- Tablero Interactivo de Módulos Culturales -->
+        <h2 class="grid-title">❖ Ejes Fundamentales de Protección ❖</h2>
+        <div class="interactive-grid">
+            
+            <div class="grid-box box-saber" onclick="openWindow('modal-saber')">
+                <div class="box-index">𓇚 I</div>
+                <h3>Protección del Saber Local</h3>
+                <p>Propiedad Intelectual and Derecho de Identidad</p>
+                <span class="btn-action">Explorar Módulo ◈</span>
+            </div>
+
+            <div class="grid-box box-comercio" onclick="openWindow('modal-comercio')">
+                <div class="box-index">☼ II</div>
+                <h3>Comercio Justo</h3>
+                <p>Historia de Vida y Derechos Humanos</p>
+                <span class="btn-action">Explorar Módulo ◈</span>
+            </div>
+
+            <div class="grid-box box-paz" onclick="openWindow('modal-paz')">
+                <div class="box-index">🕊 III</div>
+                <h3>Cultura de Paz en la Red</h3>
+                <p>Reglamento de Convivencia Virtual</p>
+                <span class="btn-action">Explorar Módulo ◈</span>
+            </div>
+
+            <div class="grid-box box-oro" onclick="openWindow('modal-oro')">
+                <div class="box-index">❖ IV</div>
+                <h3>Las 3 Reglas de Oro</h3>
+                <p>Respeto, Tolerancia y Diálogo Pacifista</p>
+                <span class="btn-action">Explorar Módulo ◈</span>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE COMENTARIOS SEGURA Y DINÁMICA -->
+        <section class="comment-area animate-slide-up">
+            <div class="comment-title-group">
+                <h2>◈ Foro de la Comunidad Yucateca ◈</h2>
+                <p>Le invitamos a añadir su voz en este espacio libre de violencia. La armonía construye nuestra historia.</p>
+            </div>
+            
+            <form id="commentForm">
+                <div class="input-container">
+                    <label for="userName">Nombre o pseudónimo de identidad:</label>
+                    <input type="text" id="userName" placeholder="Ej. Don Jacinto Ek ❖" required>
+                </div>
+                <div class="input-container">
+                    <label for="commentText">Escriba su aportación con respeto y claridad:</label>
+                    <textarea id="commentText" rows="4" placeholder="Deje un mensaje constructivo a favor de nuestras raíces..." required></textarea>
+                </div>
+                
+                <!-- Advertencia Anti-Groserías -->
+                <div id="warningMessage" class="warning-notification hidden">
+                    <strong>Aviso de Moderación:</strong> Su comentario contiene términos que no corresponden al Reglamento de Convivencia ni a la Cultura de Paz. Le invitamos amablemente a replantear sus ideas con cortesía.
+                </div>
+
+                <button type="submit" class="btn-submit-yuca">Publicar Mensaje ❖</button>
+            </form>
+
+            <div class="comments-output">
+                <h3>Mensajes Registrados (<span id="commentCount">2</span>)</h3>
+                <div id="commentsList">
+                    <div class="comment-card">
+                        <div class="comment-header-meta">
+                            <span class="author-name">◈ María Ek</span>
+                            <span class="comment-time">Hace unos momentos</span>
+                        </div>
+                        <p class="comment-body-text">El dulce de ciruela preparado con calma en almíbar de piloncillo es oro puro. Excelente que existan estas iniciativas formales para cuidar el trabajo de la gente del campo.</p>
+                    </div>
+                    <div class="comment-card">
+                        <div class="comment-header-meta">
+                            <span class="author-name">◈ J. Canché</span>
+                            <span class="comment-time">Hace 3 horas</span>
+                        </div>
+                        <p class="comment-content">Un diseño con los colores de nuestra tierra. Defender el conocimiento de nuestros abuelos es un derecho que se debe respetar en todo el estado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>❖ 2026 Consejo de Salvaguardia Gastronómica · Yucatán, México · Espacio de Expresión Segura ❖</p>
+    </footer>
+
+    <!-- ================= VENTANAS MODALES INTERACTIVAS (EFECTO APARECER/DESAPARECER) ================= -->
+
+    <!-- Ventana 1 -->
+    <div id="modal-saber" class="window-overlay">
+        <div class="window-content">
+            <button class="close-window-btn" onclick="closeWindow('modal-saber')">&times;</button>
+            <h2>𓇚 1. Protección del Saber Local</h2>
+            <span class="window-badge">Derecho de Identidad ◈</span>
+            
+            <div class="window-body-text">
+                <h3>¿Qué es la Propiedad Intelectual?</h3>
+                <p>La Propiedad Intelectual es el conjunto de derechos que protegen las creaciones, conocimientos, tradiciones y expresiones culturales de las personas y comunidades para evitar que otros las utilicen o registren como propias sin autorización.</p>
+                
+                <div class="official-quote-box">
+                    <strong>Declaración Oficial ❖</strong>
+                    <blockquote>"La receta tradicional del Dulce de Ciruela de Yucatán es un legado cultural que forma parte de la identidad de nuestra comunidad. Protegemos este saber ancestral para que sea respetado, valorado y compartido con orgullo por las futuras generaciones."</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana 2 -->
+    <div id="modal-comercio" class="window-overlay">
+        <div class="window-content">
+            <button class="close-window-btn" onclick="closeWindow('modal-comercio')">&times;</button>
+            <h2>☼ 2. Comercio Justo y Derechos Humanos</h2>
+            
+            <div class="window-body-text">
+                <h3>¿Quién lo hace?</h3>
+                <p><strong>Historia del productor:</strong> El Dulce de Ciruela de Yucatán es elaborado por familias y productores locales que han conservado esta tradición durante generaciones. Gracias a sus conocimientos y dedicación, este dulce sigue formando parte de la cultura yucateca. Cada pieza es preparada con ingredientes naturales y mucho esfuerzo, manteniendo viva una receta que representa nuestras raíces.</p>
+                
+                <div class="traditional-story-card">
+                    <span class="story-tag">𓇚 Relato Vivo Oral</span>
+                    <p>"Aprendí a hacer el dulce de ciruela cuando era joven. La persona que me enseñó fue mi mamá, quien a su vez había aprendido la receta de mis abuelos. Desde pequeña la acompañaba a preparar los dulces tradicionales de nuestra comunidad y observaba con atención cada paso.</p>
+                    <p>Recuerdo que en la temporada de ciruelas salíamos a recolectar los frutos más maduros. Después los lavábamos y los elaboramos en dulce. Mi mamá me enseñó que para hacer un buen dulce se necesita paciencia, dedicación y cariño.</p>
+                    <p>Con el paso de los años fui practicando la receta y aprendí a prepararla por mi cuenta. Ahora me gusta prepararlo y compartir este conocimiento con mi familia para que la tradición no se pierda y las nuevas generaciones sigan disfrutando del dulce de ciruela que forma parte de nuestras costumbres."</p>
+                </div>
+
+                <div class="human-rights-alert">
+                    <h4>Compromiso con los Derechos Humanos ◈</h4>
+                    <p>En este proyecto se respeta el <strong>Derecho al Trabajo Digno</strong>, garantizando pagos justos, condiciones seguras y el reconocimiento del esfuerzo de los productores, evitando cualquier forma de explotación o discriminación.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana 3 -->
+    <div id="modal-paz" class="window-overlay">
+        <div class="window-content">
+            <button class="close-window-btn" onclick="closeWindow('modal-paz')">&times;</button>
+            <h2>🕊 3. Cultura de Paz en la Red</h2>
+            
+            <div class="window-body-text">
+                <h3>Reglamento de Convivencia:</h3>
+                <ul class="custom-rules-list">
+                    <li>Tratar a todos los usuarios con respeto.</li>
+                    <li>No se permiten insultos, burlas ni lenguaje ofensivo.</li>
+                    <li>Respetar las tradiciones, costumbres y cultura de Yucatán.</li>
+                    <li>No discriminar por origen, lengua, religión o forma de pensar.</li>
+                    <li>Compartir opiniones de manera amable y constructiva.</li>
+                    <li>Mantener un ambiente seguro y cordial para todos.</li>
+                </ul>
+
+                <div class="peace-card">
+                    <h4>Cultura de Paz ❖</h4>
+                    <p>Creemos en el diálogo, el respeto y la colaboración. Nuestra página promueve la valoración del Dulce Tradicional de Ciruela de Yucatán mediante una comunicación responsable, fomentando la convivencia pacífica entre visitantes y productores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana 4 -->
+    <div id="modal-oro" class="window-overlay">
+        <div class="window-content">
+            <button class="close-window-btn" onclick="closeWindow('modal-oro')">&times;</button>
+            <h2>❖ 4. Las 3 Reglas de Oro</h2>
+            
+            <div class="window-body-text grid-rules-three">
+                <div class="rule-mini-card">
+                    <span class="rule-index-number">☼</span>
+                    <h4>Respeto</h4>
+                    <p>Tratar a todas las personas con amabilidad y valorar sus opiniones.</p>
+                </div>
+                <div class="rule-mini-card">
+                    <span class="rule-index-number">𓇚</span>
+                    <h4>Tolerancia</h4>
+                    <p>Respetar las diferencias culturales, lingüísticas y personales de cada usuario.</p>
+                </div>
+                <div class="rule-mini-card">
+                    <span class="rule-index-number">◈</span>
+                    <h4>Diálogo</h4>
+                    <p>Resolver desacuerdos mediante la comunicación pacífica y el entendimiento mutuo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Control interactivo de Ventanas con Efecto Desaparecer / Aparecer
+        function openWindow(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('is-leaving'); // Evita conflictos si se abre rápido
+            modal.classList.add('is-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeWindow(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('is-leaving'); // Activa la animación de desaparición (Fade Out)
+            
+            // Esperamos a que la animación CSS termine antes de quitar los estilos por completo
+            setTimeout(() => {
+                modal.classList.remove('is-active');
+                modal.classList.remove('is-leaving');
+                document.body.style.overflow = 'auto';
+            }, 350); // Mismo tiempo que dura la transición en el archivo CSS
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('window-overlay')) {
+                closeWindow(event.target.id);
+            }
+        }
+
+        // Filtro lingüístico de control de paz
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('userName');
+            const commentInput = document.getElementById('commentText');
+            const warningBox = document.getElementById('warningMessage');
+            const commentsList = document.getElementById('commentsList');
+            const commentCount = document.getElementById('commentCount');
+
+            const name = nameInput.value.trim();
+            const comment = commentInput.value.trim();
+
+            const forbiddenWords = [
+                'pelana', 'pelana', 'nejo', 'neja', 'macta', 'pendejo', 'pendeja', 
+                'estupido', 'estupida', 'mierda', 'puto', 'puta', 'puerco', 'maricon',
+                'baboso', 'chingar', 'pendejadas'
+            ];
+
+            warningBox.classList.add('hidden');
+
+            const cleanText = comment.toLowerCase()
+                                    .replace(/[áäàâ]/g, 'a')
+                                    .replace(/[éëèê]/g, 'e')
+                                    .replace(/[íïìî]/g, 'i')
+                                    .replace(/[óöòô]/g, 'o')
+                                    .replace(/[úüùû]/g, 'u');
+
+            let hasOffensiveLanguage = false;
+            for (let word of forbiddenWords) {
+                if (cleanText.includes(word)) {
+                    hasOffensiveLanguage = true;
+                    break;
+                }
+            }
+
+            if (hasOffensiveLanguage) {
+                warningBox.classList.remove('hidden');
+                warningBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-card animate-scale-in';
+                
+                commentItem.innerHTML = `
+                    <div class="comment-header-meta">
+                        <span class="author-name">◈ ${escapeHTML(name)}</span>
+                        <span class="comment-time">Justo ahora</span>
+                    </div>
+                    <p class="comment-body-text">${escapeHTML(comment)}</p>
+                `;
+
+                commentsList.insertBefore(commentItem, commentsList.firstChild);
+                commentCount.textContent = parseInt(commentCount.textContent) + 1;
+
+                nameInput.value = '';
+                commentInput.value = '';
+            }
+        });
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+        }
+    </script>
 </body>
-<h1></h1>Nuestras Tradiciones y Derechos</h1>
 </html>
