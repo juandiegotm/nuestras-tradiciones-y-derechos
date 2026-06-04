@@ -39,7 +39,7 @@
             <div class="grid-box box-saber" onclick="openWindow('modal-saber')">
                 <div class="box-index">𓇚 I</div>
                 <h3>Protección del Saber Local</h3>
-                <p>Propiedad Intelectual and Derecho de Identidad</p>
+                <p>Propiedad Intelectual y Derecho de Identidad</p>
                 <span class="btn-action">Explorar Módulo ◈</span>
             </div>
 
@@ -219,21 +219,20 @@
         // Control interactivo de Ventanas con Efecto Desaparecer / Aparecer
         function openWindow(id) {
             const modal = document.getElementById(id);
-            modal.classList.remove('is-leaving'); // Evita conflictos si se abre rápido
+            modal.classList.remove('is-leaving');
             modal.classList.add('is-active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeWindow(id) {
             const modal = document.getElementById(id);
-            modal.classList.add('is-leaving'); // Activa la animación de desaparición (Fade Out)
+            modal.classList.add('is-leaving');
             
-            // Esperamos a que la animación CSS termine antes de quitar los estilos por completo
             setTimeout(() => {
                 modal.classList.remove('is-active');
                 modal.classList.remove('is-leaving');
                 document.body.style.overflow = 'auto';
-            }, 350); // Mismo tiempo que dura la transición en el archivo CSS
+            }, 350);
         }
 
         window.onclick = function(event) {
