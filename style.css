@@ -1,10 +1,11 @@
-/* PALETA DE COLORES YUCATECA EN ALMÍBAR (Formal + Alegre)
+/* ==========================================================================
+   PALETA DE COLORES YUCATECA EN ALMÍBAR
    - #FFF9EE : Fondo de Pantalla (Crema Dulce)
    - #FFFDF8 : Fondo de Tarjetas (Marfil Puro)
    - #4A2E1B : Café Tostado / Piloncillo Concentrado
    - #134027 : Verde Selva Tropical / Hojas de Ciruelo
    - #E59B24 : Amarillo Fruta / Sol de Yucatán
-*/
+   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
 
@@ -37,7 +38,7 @@ body {
     pointer-events: none;
 }
 
-/* Encabezado Alegre y Formal */
+/* Encabezado */
 .main-header {
     background: linear-gradient(135deg, #2D1B10 0%, #4A2E1B 100%);
     color: #FFFDF8;
@@ -101,14 +102,14 @@ body {
     font-style: italic;
 }
 
-/* Contenedor del Cuerpo */
+/* Contenedor Principal */
 .main-container {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Introducción Institucional */
+/* Bloque de Reflexión */
 .intro-block {
     background-color: #FFFDF8;
     padding: 40px;
@@ -139,7 +140,7 @@ body {
     text-align: justify;
 }
 
-/* Grid del Tablero de Ventanas Modales */
+/* Cuadrícula de Módulos */
 .grid-title {
     font-family: 'Lora', serif;
     color: #4A2E1B;
@@ -203,7 +204,7 @@ body {
     background-color: #FFFAF0;
 }
 
-/* ================= SISTEMA DE APARECER Y DESAPARECER (MODALES) ================= */
+/* Ventanas Modales */
 .window-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -214,20 +215,16 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    
-    /* Estado base: Totalmente invisible (Desaparecido) */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease-in-out;
 }
 
-/* Transición de Aparición (Fade In) */
 .window-overlay.is-active {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Transición de Desaparición (Fade Out programada por JS) */
 .window-overlay.is-leaving {
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
@@ -244,8 +241,6 @@ body {
     position: relative;
     max-height: 85vh;
     overflow-y: auto;
-    
-    /* El contenido escala sutilmente al aparecer y desaparecer */
     transform: scale(0.92);
     transition: transform 0.35s ease-in-out;
 }
@@ -258,7 +253,6 @@ body {
     transform: scale(0.92);
 }
 
-/* Resto de componentes internos de las ventanas */
 .close-window-btn {
     position: absolute;
     top: 20px; right: 25px;
@@ -392,7 +386,7 @@ body {
     font-weight: bold;
 }
 
-/* ================= ÁREA DE COMENTARIOS CON ESTILO ================= */
+/* Área de Comentarios */
 .comment-area {
     background-color: #FFFDF8;
     border-radius: 12px;
@@ -465,7 +459,7 @@ input[type="text"]:focus, textarea:focus {
 .comment-time { color: #A19286; }
 .comment-body-text { color: #4A3A2F; }
 
-/* Animaciones de Entrada del Sitio */
+/* Animaciones */
 .animate-fade-in { animation: fadeInBlur 0.6s ease-out forwards; }
 .animate-slide-up { animation: slideUpSmooth 0.5s ease-out both; }
 .animate-scale-in { animation: scaleInSoft 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
@@ -483,8 +477,59 @@ input[type="text"]:focus, textarea:focus {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Pie de Página */
+/* ==========================================================================
+   ESTILOS NUEVOS PARA EL APARTADO FINAL DE CRÉDITOS ANIMADOS
+   ========================================================================== */
 .main-footer {
-    text-align: center; padding: 50px 20px;
-    font-size: 0.85rem; color: #8A7A6E;
+    text-align: center; 
+    padding: 40px 20px;
+    background-color: #FFFDF8;
+    border-top: 1px solid #F0E6D2;
+    margin-top: 40px;
+}
+
+.btn-credits {
+    background-color: #4A2E1B;
+    color: #FFFDF8;
+    border: 2px solid #E59B24;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 46, 27, 0.15);
+}
+
+.btn-credits:hover {
+    background-color: #134027;
+    border-color: #FFFDF8;
+    transform: scale(1.05);
+}
+
+/* Efecto colapsable con animación fluida */
+.credits-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+/* Activado dinámicamente con la función toggleCredits() */
+.credits-container.show {
+    max-height: 300px; 
+    opacity: 1;
+    margin-top: 25px;
+}
+
+.credits-content {
+    background-color: #FFFBF5;
+    border: 1px solid #E6DBC4;
+    border-radius: 10px;
+    padding: 25px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
 }

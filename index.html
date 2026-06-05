@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protección Cultural: Dulce Tradicional de Ciruela</title>
+    
+    <!-- ENLACE A TU ARCHIVO DE ESTILOS SEPARADO -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Fondo dinámico sutil -->
+    <!-- Brillo ambiental de fondo -->
     <div class="bg-gradient-glow"></div>
 
-    <!-- Encabezado con energía y formalidad -->
+    <!-- Encabezado -->
     <header class="main-header animate-fade-in">
         <div class="header-container">
             <span class="badge-tag">◈ Identidad Colectiva y Derechos ◈</span>
@@ -21,9 +23,10 @@
         </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main class="main-container">
         
-        <!-- Bloque de Responsabilidad Social (Introducción Obligatoria) -->
+        <!-- Bloque de Reflexión -->
         <section class="intro-block animate-slide-up">
             <div class="block-label">𓇚 Reflexión Institucional</div>
             <h2>Preservación del Patrimonio Gastronómico</h2>
@@ -32,10 +35,11 @@
             </p>
         </section>
 
-        <!-- Tablero Interactivo de Módulos Culturales -->
+        <!-- Cuadrícula de Módulos Interactivos -->
         <h2 class="grid-title">❖ Ejes Fundamentales de Protección ❖</h2>
         <div class="interactive-grid">
             
+            <!-- MÓDULO I CORREGIDO -->
             <div class="grid-box box-saber" onclick="openWindow('modal-saber')">
                 <div class="box-index">𓇚 I</div>
                 <h3>Protección del Saber Local</h3>
@@ -43,6 +47,7 @@
                 <span class="btn-action">Explorar Módulo ◈</span>
             </div>
 
+            <!-- MÓDULO II -->
             <div class="grid-box box-comercio" onclick="openWindow('modal-comercio')">
                 <div class="box-index">☼ II</div>
                 <h3>Comercio Justo</h3>
@@ -50,6 +55,7 @@
                 <span class="btn-action">Explorar Módulo ◈</span>
             </div>
 
+            <!-- MÓDULO III -->
             <div class="grid-box box-paz" onclick="openWindow('modal-paz')">
                 <div class="box-index">🕊 III</div>
                 <h3>Cultura de Paz en la Red</h3>
@@ -57,6 +63,7 @@
                 <span class="btn-action">Explorar Módulo ◈</span>
             </div>
 
+            <!-- MÓDULO IV -->
             <div class="grid-box box-oro" onclick="openWindow('modal-oro')">
                 <div class="box-index">❖ IV</div>
                 <h3>Las 3 Reglas de Oro</h3>
@@ -66,7 +73,7 @@
 
         </div>
 
-        <!-- SECCIÓN DE COMENTARIOS SEGURA Y DINÁMICA -->
+        <!-- Área de Comentarios (Foro) -->
         <section class="comment-area animate-slide-up">
             <div class="comment-title-group">
                 <h2>◈ Foro de la Comunidad Yucateca ◈</h2>
@@ -83,7 +90,6 @@
                     <textarea id="commentText" rows="4" placeholder="Deje un mensaje constructivo a favor de nuestras raíces..." required></textarea>
                 </div>
                 
-                <!-- Advertencia Anti-Groserías -->
                 <div id="warningMessage" class="warning-notification hidden">
                     <strong>Aviso de Moderación:</strong> Su comentario contiene términos que no corresponden al Reglamento de Convivencia ni a la Cultura de Paz. Le invitamos amablemente a replantear sus ideas con cortesía.
                 </div>
@@ -106,7 +112,7 @@
                             <span class="author-name">◈ J. Canché</span>
                             <span class="comment-time">Hace 3 horas</span>
                         </div>
-                        <p class="comment-content">Un diseño con los colores de nuestra tierra. Defender el conocimiento de nuestros abuelos es un derecho que se debe respetar en todo el estado.</p>
+                        <p class="comment-body-text">Un diseño con los colores de nuestra tierra. Defender el conocimiento de nuestros abuelos es un derecho que se debe respetar en todo el estado.</p>
                     </div>
                 </div>
             </div>
@@ -114,13 +120,27 @@
 
     </main>
 
+    <!-- PIE DE PÁGINA CON EL NUEVO BOTÓN INTERACTIVO -->
     <footer class="main-footer">
-        <p>❖ 2026 Consejo de Salvaguardia Gastronómica · Yucatán, México · Espacio de Expresión Segura ❖</p>
+        <button class="btn-credits" onclick="toggleCredits()">Ver Créditos de los Autores ❖</button>
+        
+        <div id="creditsSection" class="credits-container">
+            <div class="credits-content">
+                <p style="margin-bottom: 12px; font-weight: bold; color: #4A2E1B; font-size: 1.1rem;">
+                    Esta página fue elaborada por estudiantes del Telebachillerato Comunitario de Calcehtok:
+                </p>
+                <p style="color: #362013; font-size: 1rem; line-height: 1.8; font-weight: 600;">
+                    Mareli Anahi Yama Vega.<br>
+                    Martha Marely Chable Kúk.<br>
+                    Juan Diego Patricio Tec May.<br>
+                    Yuliana Alejandra Pool Grimaldo.
+                </p>
+            </div>
+        </div>
     </footer>
 
-    <!-- ================= VENTANAS MODALES INTERACTIVAS (EFECTO APARECER/DESAPARECER) ================= -->
-
-    <!-- Ventana 1 -->
+    <!-- VENTANAS MODALES INTERACTIVAS -->
+    <!-- Modal Módulo I -->
     <div id="modal-saber" class="window-overlay">
         <div class="window-content">
             <button class="close-window-btn" onclick="closeWindow('modal-saber')">&times;</button>
@@ -139,7 +159,7 @@
         </div>
     </div>
 
-    <!-- Ventana 2 -->
+    <!-- Modal Módulo II -->
     <div id="modal-comercio" class="window-overlay">
         <div class="window-content">
             <button class="close-window-btn" onclick="closeWindow('modal-comercio')">&times;</button>
@@ -164,7 +184,7 @@
         </div>
     </div>
 
-    <!-- Ventana 3 -->
+    <!-- Modal Módulo III -->
     <div id="modal-paz" class="window-overlay">
         <div class="window-content">
             <button class="close-window-btn" onclick="closeWindow('modal-paz')">&times;</button>
@@ -189,7 +209,7 @@
         </div>
     </div>
 
-    <!-- Ventana 4 -->
+    <!-- Modal Módulo IV -->
     <div id="modal-oro" class="window-overlay">
         <div class="window-content">
             <button class="close-window-btn" onclick="closeWindow('modal-oro')">&times;</button>
@@ -215,8 +235,15 @@
         </div>
     </div>
 
+    <!-- CÓDIGO DE FUNCIONALIDAD COMPORTAMIENTO (JAVASCRIPT) -->
     <script>
-        // Control interactivo de Ventanas con Efecto Desaparecer / Aparecer
+        // Función para el despliegue animado de créditos de los alumnos
+        function toggleCredits() {
+            const creditsSection = document.getElementById('creditsSection');
+            creditsSection.classList.toggle('show');
+        }
+
+        // Abrir ventanas modales
         function openWindow(id) {
             const modal = document.getElementById(id);
             modal.classList.remove('is-leaving');
@@ -224,6 +251,7 @@
             document.body.style.overflow = 'hidden';
         }
 
+        // Cerrar ventanas modales
         function closeWindow(id) {
             const modal = document.getElementById(id);
             modal.classList.add('is-leaving');
@@ -235,13 +263,14 @@
             }, 350);
         }
 
+        // Cerrar al hacer clic afuera
         window.onclick = function(event) {
             if (event.target.classList.contains('window-overlay')) {
                 closeWindow(event.target.id);
             }
         }
 
-        // Filtro lingüístico de control de paz
+        // Sistema del Foro de Comentarios con Filtro de Convivencia
         document.getElementById('commentForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -255,7 +284,7 @@
             const comment = commentInput.value.trim();
 
             const forbiddenWords = [
-                'pelana', 'pelana', 'nejo', 'neja', 'macta', 'pendejo', 'pendeja', 
+                'pelana', 'nejo', 'neja', 'macta', 'pendejo', 'pendeja', 
                 'estupido', 'estupida', 'mierda', 'puto', 'puta', 'puerco', 'maricon',
                 'baboso', 'chingar', 'pendejadas'
             ];
